@@ -1,16 +1,68 @@
-# connectx_task_shopapp
+# 🛍️ ConnectX Shop App
 
-A new Flutter project.
+A modern Flutter E-Commerce application built with **Flutter**, **Firebase**, and **BLoC** architecture.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+* Authentication (Login & Register)
+* Home Screen
+* Categories
+* Product Details
+* Search Products
+* Wishlist
+* Shopping Cart
+* Quantity Management
+* Checkout
+* Order Confirmation
+* User Profile
+* Edit Profile
+* Reset Password
+* Responsive UI
 
-A few resources to get you started if this is your first Flutter project:
+## 🏗️ Architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* BLoC State Management
+* Clean Folder Structure
+* REST API Integration
+* Firebase Authentication
+* Cloud Firestore
+* Shared Preferences
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Technologies
+
+* Flutter
+* Dart
+* flutter_bloc
+* Firebase Auth
+* Cloud Firestore
+* Dio
+* Shared Preferences
+* ScreenUtil
+
+## 📱 Screenshots
+
+Coming Soon...
+
+## 🚀 Getting Started
+
+```bash
+flutter pub get
+flutter run
+```
+
+## 📂 Project Structure
+
+```
+lib
+├── features
+├── models
+├── shared
+├── network
+└── main.dart
+```
+
+## 👩‍💻 Developed by
+
+**Nada Mohsen Ahmed**
+
+Flutter Developer
