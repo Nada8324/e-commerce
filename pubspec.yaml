@@ -36,28 +36,28 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  google_fonts: ^6.2.1
+  google_fonts: ^8.1.0
   hexcolor: ^3.0.1
   flutter_screenutil: ^5.9.0
   iconsax: ^0.0.8
   wc_form_validators: ^1.0.1
-  shared_preferences: ^2.2.3
+  shared_preferences: ^2.5.3
   flutter_switch: ^0.3.2
-  dio: ^5.4.3+1
-  fluttertoast: ^8.2.5
+  dio: ^5.9.0
+  fluttertoast: ^9.0.0
   conditional_builder_null_safety: ^0.0.6
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.1.2
   readmore: ^3.0.0
-  flutter_native_splash: ^2.4.0
+  flutter_native_splash: ^2.4.7
   get: ^4.6.6
   animated_splash_screen: ^1.3.0
-  smooth_page_indicator: ^1.1.0
-  flutter_bloc: ^8.1.5
-  firebase_core: ^2.30.0
-  firebase_auth: ^4.19.2
-  cloud_firestore: ^4.17.0
-  image_picker: ^1.1.0
-  firebase_storage: ^11.7.2
+  smooth_page_indicator: ^1.2.1
+  flutter_bloc: ^9.1.1
+  firebase_core: ^4.0.0
+  firebase_auth: ^6.0.0
+  cloud_firestore: ^6.0.0
+  firebase_storage: ^13.0.0
+  image_picker: ^1.2.0
 
 
 
@@ -93,6 +93,8 @@ flutter:
     - assets/images/onboarding1.png
     - assets/images/onboarding2.jpg
     - assets/images/onboarding3.jpg
+    - assets/images/user.jpg
+    - assets/images/orderblaced.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -122,5 +124,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-assets/images/onboarding3:
-  jpg:

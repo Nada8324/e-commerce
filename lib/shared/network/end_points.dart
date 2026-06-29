@@ -1,9 +1,12 @@
-const LOGIN='login';
-const Register='register';
-const Categories='categories';
-const Home='home';
-const Products='products';
-const FAVORITE='favorites';
-const CARTS='carts';
-const Updatecart='carts/3';
-const Profile='profile';
+const LOGIN = 'auth/login';
+const Register = '';
+
+const Categories = 'products/categories';
+const Home = 'products';
+const Products = 'products/category';
+const Search = 'products/search';
+const FAVORITE = '';
+const CARTS = 'carts';
+const Updatecart = 'carts/1';
+
+const Profile = 'auth/me';

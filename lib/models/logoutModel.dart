@@ -1,5 +1,3 @@
-import 'logoutModel.dart';
-import 'logoutModel.dart';
 
 class logoutModel{
   bool ? status;

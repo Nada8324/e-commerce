@@ -1,29 +1,45 @@
-class CategoryModel{
-  bool ?status;
-  CategoryDetails ?data;
-  CategoryModel.Fromjson(Map<String,dynamic>json){
-    status=json['status'];
-    data=CategoryDetails.Fromjson(json['data']);
-  }
-}
-class CategoryDetails{
-  int? current_page;
-  List<DataModel>? data=[];
-  CategoryDetails.Fromjson(Map<String,dynamic>json){
-    current_page=json['current_page'];
-    json['data'].forEach((element){
-      data?.add(DataModel.Fromjson(element));
-    });
-  }
+class CategoryModel {
+  bool? status;
+  CategoryDetails? data;
 
+  CategoryModel.Fromjson(dynamic json) {
+    status = true;
+    data = CategoryDetails.Fromjson(json);
+  }
 }
-class DataModel{
+
+class CategoryDetails {
+  int? current_page;
+  List<DataModel>? data = [];
+
+  CategoryDetails.Fromjson(dynamic json) {
+    final categories = json is List ? json : json['data'] as List? ?? [];
+    for (var i = 0; i < categories.length; i++) {
+      data?.add(DataModel.Fromjson(categories[i], i));
+    }
+  }
+}
+
+class DataModel {
   int? id;
   String? name;
-  String? image;
-  DataModel.Fromjson(Map<String,dynamic> json){
-    id=json['id'];
-    name=json['name'];
-    image=json['image'];
+  String? slug;
+
+
+  DataModel.Fromjson(dynamic json, [int? index]) {
+    id = json is Map<String, dynamic> ? json['id'] ?? index : index;
+    slug =
+        json is Map<String, dynamic> ? json['slug'] ?? json['name'] : json.toString();
+    name = json is Map<String, dynamic>
+        ? json['name'] ?? slug
+        : _formatCategoryName(slug ?? '');
   }
+}
+
+String _formatCategoryName(String value) {
+  return value
+      .split('-')
+      .where((word) => word.isNotEmpty)
+      .map((word) => '${word[0].toUpperCase()}${word.substring(1)}')
+      .join(' ');
 }

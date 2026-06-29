@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:dio/dio.dart';
 
@@ -11,7 +10,7 @@ class DioHelper
   {
     dio = Dio(
       BaseOptions(
-        baseUrl: 'https://student.valuxapps.com/api/',
+        baseUrl: 'https://dummyjson.com/',
         receiveDataWhenStatusError: true,
       ),
     );

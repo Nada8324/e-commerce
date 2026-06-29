@@ -1,22 +1,21 @@
 import '../shared/component/component.dart';
 
-class EachCategoryModel{
-  late bool status;
+class EachCategoryModel {
+  bool status = true;
   EachCategoryDataModel? data;
-  EachCategoryModel.fromjson(Map<String,dynamic>json){
-    status = json['status'];
-    if (status) {
-      data = EachCategoryDataModel.fromjson(json['data']);
-    }
+
+  EachCategoryModel.fromjson(Map<String, dynamic> json) {
+    data = EachCategoryDataModel.fromjson(json);
   }
-
 }
-class EachCategoryDataModel{
 
-  List<ProductsModel>? products=[];
-  EachCategoryDataModel.fromjson(Map<String,dynamic>json){
-    json['data'].forEach((element) {
-      products?.add(ProductsModel.fromjson(element));
-    });
+class EachCategoryDataModel {
+  List<ProductsModel>? products = [];
+
+  EachCategoryDataModel.fromjson(Map<String, dynamic> json) {
+    final list = json['products'] as List? ?? json['data'] as List? ?? [];
+    for (final element in list) {
+      products?.add(ProductsModel.fromJson(element));
+    }
   }
 }
