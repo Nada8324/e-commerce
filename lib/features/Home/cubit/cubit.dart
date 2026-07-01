@@ -382,16 +382,21 @@ class HomeCubit extends Cubit<HomeScreenStates> {
 
   Widget build_category_item(DataModel model, BuildContext context) {
     return InkWell(
-      onTap: () {
+      onTap: () async {
         EachCategoryScreen.id = model.id;
         EachCategoryScreen.name = model.name;
         EachCategoryScreen.slug = model.slug;
 
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const EachCategoryScreen(),
-            ));
+        final refresh = await Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (_) => const EachCategoryScreen(),
+  ),
+);
+
+if (refresh == true) {
+  HomeCubit.get(context).getHomeData();
+}
       },
       child: Container(
         padding: const EdgeInsets.all(15),
